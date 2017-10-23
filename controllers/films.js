@@ -5,7 +5,7 @@ var Review = require('../client/src/models/review');Index route to show all film
 
 var movies = ["Now You See Me", "Star Wars Episode IV: A New Hope"]
 
-// index
+// index--works in insomnia
 
 router.get('/', function(req, res){
   res.json(movies)
@@ -17,13 +17,13 @@ router.get('/:id', function (req, res) {
   res.json(movie)
 })
 
-// create
+// create   --didn't work per insomnia 404
 router.post('/', function(req, res){
   movies.push( req.body.newMovie )
   res.json( movies )
 })
 
-// update
+// update --didn't work per insomnia 404
 router.put('/:id', function (req, res){
   var id = req.params.id
   var updatedMovies = req.body.updatedMovies
